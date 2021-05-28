@@ -14,6 +14,8 @@ public class AddressList {
         Address newAddress = new Address();
         System.out.println(newAddress.toString());
 
-        Address papjhone = new Address();
+        Address papaJohnPizza = new Address("8501 Tyco Rd Ste 1A", "Vienna", "VA", "22182");
+        System.out.println("Papa John pizza = " + papaJohnPizza.toString());
+
     }
 }

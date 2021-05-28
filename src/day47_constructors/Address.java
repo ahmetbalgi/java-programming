@@ -16,6 +16,13 @@ public class Address {
        state = "Unknown";
        zipCode = "00000";
    }
+    public Address(String street, String city, String state, String zipCode) {
+        setStreet(street);//reuse the code in the setter method
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+    }
+
 
     public String getStreet() {
         return street;
@@ -23,7 +30,12 @@ public class Address {
 
     public void setStreet(String street) {
 
-        this.street = street;
+            if(street.isEmpty() || street.length() > 50) {
+                System.out.println("ERROR: Invalid street");
+                //System.exit(0);
+            } else {
+                this.street = street;
+            }
     }
 
     public String getCity() {
