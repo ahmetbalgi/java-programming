@@ -1,17 +1,28 @@
 package day47_constructors;
 
-public class address {
+public class Address {
     private String street;
     private String city;
     private String state;
    private String zipCode;
    private String country = "USA";
 
+
+   public Address(){
+       //constructor - automatically called
+       System.out.println("Address constructor");
+       street = "123 unknown st";
+       city = "Unknown";
+       state = "Unknown";
+       zipCode = "00000";
+   }
+
     public String getStreet() {
         return street;
     }
 
     public void setStreet(String street) {
+
         this.street = street;
     }
 
@@ -49,12 +60,9 @@ public class address {
 
     @Override
     public String toString() {
-        return "address{" +
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+        return
+                street + '\'' + city + '\'' +
+                state + '\'' +
+                 zipCode + '\'';
     }
 }
