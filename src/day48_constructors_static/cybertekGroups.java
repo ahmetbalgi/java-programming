@@ -29,6 +29,10 @@ public class cybertekGroups {
             System.out.println("Akrem is member of group 2");
         }else {
             System.out.println("Akrem is not in group 2");
+            group1.removeMember("Pavel");
+            group1.removeMember("Elvin");
+            System.out.println(group1);
+
 
         }
     }
